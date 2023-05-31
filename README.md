@@ -6,6 +6,7 @@ It all starts with the following paper by Sean Ressler et al. which leverages th
 
 [KHARMA](https://github.com/AFD-Illinois/kharma) implements their equation 27 in `electrons.cpp` which describes the heating update to the electrons: 
 $\kappa_{n+1}^e = \hat{\kappa}_{n+1}^e + \frac{\gamma_e - 1}{\gamma - 1} \left(\rho^{\gamma - \gamma_e} f_e\right)^{n+1/2} (\kappa_g - \hat{\kappa}_g)^{n+1}$
+
 The second term is dissipation, the hat variables are entropy conserving, and the other ones are energy conserving. The $f_e$ term is the fraction of heating from the gas that the electrons receive. 
 
 These ratios can be dependent on the density, magnetic field, internal energy, and any other variables in the simulation. Plasma physicists come up with electron heating models that describe relevant phenomena and their effect on the electron heating ratio $f_e$. We care about the heating of electrons as it can be used to image black hole accretion systems with [ipole](https://github.com/AFD-Illinois/ipole).
