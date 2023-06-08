@@ -43,7 +43,7 @@ if __name__ == "__main__":
             col = count%cols
             full_path = os.path.join(directory, filename)
             img = cv2.imread(full_path)
-            output_image[in_shape[1]*row:in_shape[1]*(row+1), in_shape[0]*col:in_shape[0]*(col+1)] = img
+            output_image[in_shape[0]*row:in_shape[0]*(row+1), in_shape[1]*col:in_shape[1]*(col+1)] = img
             output_file = os.path.join(output_dir, filename)
             cv2.imwrite(output_file, output_image)
             count = count + 1
